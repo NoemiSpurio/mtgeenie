@@ -21,4 +21,8 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="20240617-02" author="nhy">
+        <dropColumn tableName="set" columnName="symbol"/>
+    </changeSet>
+
 </databaseChangeLog>

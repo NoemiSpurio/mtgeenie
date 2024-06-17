@@ -23,10 +23,6 @@ public class Set {
     @Column(name = "code")
     private String code;
 
-    @Lob
-    @Column(name = "symbol", columnDefinition = "LONGTEXT")
-    private String symbol;
-
     @Column(name = "type")
     private String type;
 
