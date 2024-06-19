@@ -121,4 +121,10 @@
         <sqlFile path="db/changelog/include/script/insert-types.sql"/>
     </changeSet>
 
+    <changeSet id="20240619-07" author="nhy">
+        <addColumn tableName="card">
+            <column name="rarity" type="varchar(1)"/>
+        </addColumn>
+    </changeSet>
+
 </databaseChangeLog>

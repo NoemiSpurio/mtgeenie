@@ -1,5 +1,6 @@
 package com.nhy.mtgeenie.model;
 
+import com.nhy.mtgeenie.enumeration.CardRarityEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +21,10 @@ public class Card {
 
     @Column(name = "number")
     private String number;
+
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "rarity")
+    private CardRarityEnum rarity;
 
     @ManyToOne
     @JoinColumn(name = "set_id")
