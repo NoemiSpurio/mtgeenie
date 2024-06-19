@@ -56,4 +56,30 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="20240619-03" author="nhy">
+        <createTable tableName="card">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="number" type="varchar(255)"/>
+            <column name="set_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cost_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="set_id" baseTableName="card"
+                                 constraintName="fk_card_set" deferrable="false" initiallyDeferred="false"
+                                 referencedColumnNames="id" referencedTableName="mtg_set"
+                                 validate="true"/>
+
+        <addForeignKeyConstraint baseColumnNames="cost_id" baseTableName="card"
+                                 constraintName="fk_card_cost" deferrable="false" initiallyDeferred="false"
+                                 referencedColumnNames="id" referencedTableName="cost"
+                                 validate="true"/>
+    </changeSet>
+
 </databaseChangeLog>
