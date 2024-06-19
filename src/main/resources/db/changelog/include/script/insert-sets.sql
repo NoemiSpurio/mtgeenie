@@ -145,7 +145,82 @@ VALUES (UUID(), 'Duel Decks Anthology', 'DD3', 'Box set', 'Duel Decks reprint se
 VALUES (UUID(), 'Fate Reforged', 'FRF', 'Expansion set', '66th expansion', '2015-01-23'),
 VALUES (UUID(), 'Duel Decks: Elspeth vs. Kiora', 'DDO', 'Box set', 'Duel Decks set #15', '2015-02-27'),
 VALUES (UUID(), 'Dragons of Tarkir', 'DTK', 'Expansion set', '67th expansion', '2015-03-27'),
--- VALUES (UUID(), 'Tempest Remastered', 'DTK', 'Expansion set', '67th expansion', '2015-03-27'),
+VALUES (UUID(), 'Tempest Remastered', 'TPR', 'Compilation set', 'Magic Online Masters set #6', '2015-05-06'),
+VALUES (UUID(), 'Modern Masters 2015', 'MM2', 'Compilation set', 'Masters set #2', '2015-05-22'),
+VALUES (UUID(), 'Magic Origins', 'ORI', 'Core set', 'Core set #17', '2015-07-17'),
+VALUES (UUID(), 'From the Vault: Angels', 'V15', 'Box set', 'From the Vault set #8', '2015-08-21'),
+VALUES (UUID(), 'Duel Decks: Zendikar vs. Eldrazi', 'DDP', 'Box set', 'Duel Decks set #16', '2015-08-28'),
+VALUES (UUID(), 'Battle for Zendikar', 'BFZ', 'Expansion set', '68th expansion', '2015-10-02'),
+VALUES (UUID(), 'Zendikar Expeditions', 'EXP', 'Compilation set', 'Masterpiece Series set #1 (Battle for Zendikar block)', '2015-10-02'),
+VALUES (UUID(), 'Commander 2015', 'C15', 'Box set', 'Commander set #5', '2015-11-13'),
+VALUES (UUID(), 'Legendary Cube', 'PZ1', 'Compilation set', 'Magic Online only', '2015-11-18'),
+VALUES (UUID(), 'Oath of the Gatewatch', 'OGW', 'Expansion set', '69th expansion', '2016-01-22'),
+VALUES (UUID(), 'Duel Decks: Blessed vs. Cursed', 'DDQ', 'Box set', 'Duel Decks set #17', '2016-02-26'),
+VALUES (UUID(), 'Welcome Deck 2016', 'W16', 'Compilation set', 'Welcome Deck set #1', '2016-04-08'),
+VALUES (UUID(), 'Shadows over Innistrad', 'SOI', 'Expansion set', '70th expansion', '2016-04-08'),
+VALUES (UUID(), 'Eternal Masters', 'EMA', 'Compilation set', 'Masters set #3', '2016-06-10'),
+VALUES (UUID(), 'Eldritch Moon', 'EMN', 'Expansion set', '71st expansion', '2016-07-22'),
+VALUES (UUID(), 'From the Vault: Lore', 'V16', 'Box set', 'From the Vault set #9', '2016-08-19'),
+VALUES (UUID(), 'Conspiracy: Take the Crown', 'CN2', 'Supplemental set', 'Conspiracy set #2', '2016-08-26'),
+VALUES (UUID(), 'Duel Decks: Nissa vs. Ob Nixilis', 'DDR', 'Box set', 'Duel Decks set #18', '2016-09-02'),
+VALUES (UUID(), 'Kaladesh', 'KLD', 'Expansion set', '72nd expansion', '2016-09-30'),
+VALUES (UUID(), 'Kaladesh Inventions', 'MPS', 'Compilation set', 'Masterpiece Series set #2 (Kaladesh block)', '2017-01-20'),
+VALUES (UUID(), 'Treasure Chests', 'PZ2', 'Compilation set', 'Magic Online only', '2016-10-05'),
+VALUES (UUID(), 'Commander 2016', 'C16', 'Box set', 'Commander set #6', '2016-11-11'),
+VALUES (UUID(), 'You Make the Cube', null, 'Compilation set', 'Magic Online only', '2016-11-16'),
+VALUES (UUID(), 'Planechase Anthology', 'PCA', 'Box set', 'Planechase set #3', '2016-11-25'),
+VALUES (UUID(), 'Aether Revolt', 'AER', 'Expansion set', '73rd expansion', '2017-01-20'),
+VALUES (UUID(), 'Modern Masters 2017', 'MM3', 'Compilation set', 'Masters set #4', '2017-03-17'),
+VALUES (UUID(), 'Duel Decks: Mind vs. Might', 'DDS', 'Box set', 'Duel Decks set #19', '2017-03-31'),
+VALUES (UUID(), 'Welcome Deck 2017', 'W17', 'Compilation set', 'Welcome Deck set #2', '2017-04-15'),
+VALUES (UUID(), 'Amonkhet', 'AKH', 'Expansion set', '74th expansion', '2017-04-28'),
+VALUES (UUID(), 'Amonkhet Invocations', 'MP2', 'Compilation set', 'Masterpiece Series set #3 (Amonkhet block)', '2017-04-28'),
+VALUES (UUID(), 'Commander Anthology', 'CMA', 'Box set', 'Commander set #7', '2017-06-09'),
+VALUES (UUID(), 'Archenemy: Nicol Bolas', 'E01', 'Supplemental set', 'Archenemy set #2, Annex set #1', '2017-06-16'),
+VALUES (UUID(), 'Hour of Devastation', 'HOU', 'Expansion set', '75th expansion', '2017-07-14'),
+VALUES (UUID(), 'Commander 2017', 'C17', 'Box set', 'Commander set #8', '2017-08-25'),
+VALUES (UUID(), 'Ixalan', 'XLN', 'Expansion set', '76th expansion', '2017-09-29'),
+VALUES (UUID(), 'Duel Decks: Merfolk vs. Goblins', 'DDT', 'Box set', 'Duel Decks set #20', '2017-11-10'),
+VALUES (UUID(), 'Iconic Masters', 'IMA', 'Compilation set', 'Masters set #5', '2017-11-17'),
+VALUES (UUID(), 'Explorers of Ixalan', 'E02', 'Supplemental set', 'Annex set #2', '2017-11-24'),
+VALUES (UUID(), 'From the Vault: Transform', 'V17', 'Box set', 'From the Vault set #10', '2017-11-24'),
+VALUES (UUID(), 'Unstable', 'UST', 'Un-set', 'Un-set #3', '2017-12-08'),
+VALUES (UUID(), 'Rivals of Ixalan', 'RIX', 'Expansion set', '77th expansion', '2018-01-19'),
+-- VALUES (UUID(), 'Masters 25', 'RIX', 'Expansion set', '77th expansion', '2018-01-19'),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
