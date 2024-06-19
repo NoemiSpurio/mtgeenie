@@ -5,7 +5,7 @@ import lombok.*;
 
 import java.time.LocalDate;
 
-@Entity
+@Entity(name = "mtg_set")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
