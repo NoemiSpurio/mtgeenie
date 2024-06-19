@@ -117,4 +117,8 @@
                                  validate="true"/>
     </changeSet>
 
+    <changeSet id="20240619-06" author="nhy">
+        <sqlFile path="db/changelog/include/script/insert-types.sql"/>
+    </changeSet>
+
 </databaseChangeLog>
