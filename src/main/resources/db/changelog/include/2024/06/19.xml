@@ -12,5 +12,48 @@
     <changeSet id="20240619-01" author="nhy">
         <sqlFile path="db/changelog/include/script/insert-sets.sql"/>
     </changeSet>
+    
+    <changeSet id="20240619-02" author="nhy">
+        <createTable tableName="cost">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="black" type="integer"/>
+            <column name="blue" type="integer"/>
+            <column name="white" type="integer"/>
+            <column name="red" type="integer"/>
+            <column name="green" type="integer"/>
+            <column name="generic" type="integer"/>
+            <column name="colorless" type="integer"/>
+            <column name="snow" type="integer"/>
+            <column name="uw" type="integer"/>
+            <column name="ub" type="integer"/>
+            <column name="br" type="integer"/>
+            <column name="rg" type="integer"/>
+            <column name="wg" type="integer"/>
+            <column name="bw" type="integer"/>
+            <column name="ur" type="integer"/>
+            <column name="bg" type="integer"/>
+            <column name="colorless_w" type="integer"/>
+            <column name="colorless_u" type="integer"/>
+            <column name="colorless_b" type="integer"/>
+            <column name="colorless_r" type="integer"/>
+            <column name="colorless_g" type="integer"/>
+            <column name="double_generic_w" type="integer"/>
+            <column name="double_generic_u" type="integer"/>
+            <column name="double_generic_b" type="integer"/>
+            <column name="double_generic_r" type="integer"/>
+            <column name="double_generic_g" type="integer"/>
+            <column name="phyrexian_w" type="integer"/>
+            <column name="phyrexian_u" type="integer"/>
+            <column name="phyrexian_b" type="integer"/>
+            <column name="phyrexian_r" type="integer"/>
+            <column name="phyrexian_g" type="integer"/>
+            <column name="phyrexian_r_g" type="integer"/>
+            <column name="phyrexian_g_w" type="integer"/>
+            <column name="phyrexian_r_w" type="integer"/>
+            <column name="phyrexian_u_g" type="integer"/>
+        </createTable>
+    </changeSet>
 
 </databaseChangeLog>
