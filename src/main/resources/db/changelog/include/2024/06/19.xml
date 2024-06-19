@@ -93,4 +93,28 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="20240619-05" author="nhy">
+        <createTable tableName="card_type">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="card_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="card_id" baseTableName="card_type"
+                                 constraintName="fk_card_type_card" deferrable="false" initiallyDeferred="false"
+                                 referencedColumnNames="id" referencedTableName="card"
+                                 validate="true"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_id" baseTableName="card_type"
+                                 constraintName="fk_card_type_type" deferrable="false" initiallyDeferred="false"
+                                 referencedColumnNames="id" referencedTableName="type"
+                                 validate="true"/>
+    </changeSet>
+
 </databaseChangeLog>
