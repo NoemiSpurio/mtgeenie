@@ -5,8 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <include file="classpath:/db/changelog/include/2024/06/17.xml"/>
-    <include file="classpath:/db/changelog/include/2024/06/19.xml"/>
-    <include file="classpath:/db/changelog/include/2024/07/08.xml"/>
+    <changeSet id="20240708-01" author="nhy">
+        <addColumn tableName="card">
+            <column name="amount_owned" type="integer"/>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>

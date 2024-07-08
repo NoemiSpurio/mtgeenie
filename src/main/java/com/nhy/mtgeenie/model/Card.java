@@ -33,4 +33,7 @@ public class Card {
     @OneToOne
     @JoinColumn(name = "cost_id")
     private Cost cost;
+
+    @Column(name = "amount_owned")
+    private int amountOwned;
 }
