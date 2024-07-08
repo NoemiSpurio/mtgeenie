@@ -1,5 +1,6 @@
 package com.nhy.mtgeenie.dto.cost;
 
+import com.nhy.mtgeenie.model.Cost;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -45,4 +46,44 @@ public class CostCreateDTO {
     private Integer phyrexianGW;
     private Integer phyrexianRW;
     private Integer phyrexianUG;
+
+    public Cost toModel(){
+        return Cost.builder()
+                .black(this.black)
+                .blue(this.blue)
+                .white(this.white)
+                .red(this.red)
+                .green(this.green)
+                .generic(this.generic)
+                .colorless(this.colorless)
+                .snow(this.snow)
+                .uw(this.uw)
+                .ub(this.ub)
+                .br(this.br)
+                .rg(this.rg)
+                .wg(this.wg)
+                .bw(this.bw)
+                .ur(this.ur)
+                .bg(this.bg)
+                .colorlessW(this.colorlessW)
+                .colorlessU(this.colorlessU)
+                .colorlessB(this.colorlessB)
+                .colorlessR(this.colorlessR)
+                .colorlessG(this.colorlessG)
+                .doubleGenericW(this.doubleGenericW)
+                .doubleGenericU(this.doubleGenericU)
+                .doubleGenericB(this.doubleGenericB)
+                .doubleGenericR(this.doubleGenericR)
+                .doubleGenericG(this.doubleGenericG)
+                .phyrexianW(this.phyrexianW)
+                .phyrexianU(this.phyrexianU)
+                .phyrexianB(this.phyrexianB)
+                .phyrexianR(this.phyrexianR)
+                .phyrexianG(this.phyrexianG)
+                .phyrexianRG(this.phyrexianRG)
+                .phyrexianGW(this.phyrexianGW)
+                .phyrexianRW(this.phyrexianRW)
+                .phyrexianUG(this.phyrexianUG)
+                .build();
+    }
 }
