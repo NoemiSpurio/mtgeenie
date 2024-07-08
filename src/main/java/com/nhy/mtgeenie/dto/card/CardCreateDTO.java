@@ -4,10 +4,7 @@ import com.nhy.mtgeenie.dto.cost.CostCreateDTO;
 import com.nhy.mtgeenie.enumeration.CardRarityEnum;
 import com.nhy.mtgeenie.enumeration.CardTypeEnum;
 import com.nhy.mtgeenie.model.Card;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -16,12 +13,23 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CardCreateDTO {
+    @NonNull
     private String name;
+
+    @NonNull
     private String number;
+
+    @NonNull
     private String setId;
+
     private List<CardTypeEnum> types;
+
+    @NonNull
     private CostCreateDTO cost;
+
+    @NonNull
     private CardRarityEnum rarity;
+
     private int amountOwned;
 
     public Card toModel(){

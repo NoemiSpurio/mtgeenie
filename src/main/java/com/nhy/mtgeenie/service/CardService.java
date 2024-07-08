@@ -4,11 +4,9 @@ import com.nhy.mtgeenie.dto.card.CardCreateDTO;
 import com.nhy.mtgeenie.exception.MtgeenieException;
 import com.nhy.mtgeenie.model.Card;
 import com.nhy.mtgeenie.model.CardType;
+import com.nhy.mtgeenie.model.Cost;
 import com.nhy.mtgeenie.model.Set;
-import com.nhy.mtgeenie.repository.CardRepository;
-import com.nhy.mtgeenie.repository.CardTypeRepository;
-import com.nhy.mtgeenie.repository.SetRepository;
-import com.nhy.mtgeenie.repository.TypeRepository;
+import com.nhy.mtgeenie.repository.*;
 import lombok.AllArgsConstructor;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.http.HttpStatus;
@@ -28,6 +26,7 @@ public class CardService {
     private final SetRepository setRepository;
     private final TypeRepository typeRepository;
     private final CardTypeRepository cardTypeRepository;
+    private final CostRepository costRepository;
 
     @Transactional
     public void create(CardCreateDTO dto) {
@@ -42,8 +41,14 @@ public class CardService {
             changeAmount(cardAlreadySaved.get(), dto.getAmountOwned());
             log.info("FINE metodo creazione card, per card con id: " + cardAlreadySaved.get().getId());
         } else {
+            if (dto.getAmountOwned() < 0) {
+                throw new MtgeenieException("card.negative-amount", HttpStatus.BAD_REQUEST);
+            }
+            Cost cost = costRepository.save(dto.getCost().toModel());
+
             Card card = dto.toModel();
             card.setSet(set);
+            card.setCost(cost);
             Card cardSaved = cardRepository.save(card);
 
             List<CardType> cardTypes = new ArrayList<>();
@@ -64,11 +69,17 @@ public class CardService {
         if (newAmount < 0) {
             throw new MtgeenieException("card.negative-amount", HttpStatus.BAD_REQUEST);
         } else if (newAmount == 0) {
-            cardRepository.delete(card);
+            deleteCard(card);
+            log.info("Carta eliminata perche' quantita' posseduta ridotta a 0.");
         } else {
             card.setAmountOwned(card.getAmountOwned() + amount);
             cardRepository.save(card);
         }
         log.info("FINE metodo modifica quantita' carta, per carta con id: " + card.getId());
+    }
+
+    public void deleteCard(Card card){
+        cardTypeRepository.deleteAllByCard(card);
+        cardRepository.cascadeDelete(card.getId());
     }
 }
