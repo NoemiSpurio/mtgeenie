@@ -16,10 +16,10 @@ public class CardService {
     private final CardRepository cardRepository;
     private final SetRepository setRepository;
 
-    void create(CardCreateDTO dto) {
+    public void create(CardCreateDTO dto) {
         //Recupero il set al quale appartiene la carta
         Set set = setRepository.findById(dto.getSetId())
-                .orElseThrow(() -> new MtgeenieException("Errore: set_id non valido", HttpStatus.BAD_REQUEST));
+                .orElseThrow(() -> new MtgeenieException("set.id-not-found", HttpStatus.BAD_REQUEST));
 
         //TODO finire logica
     }
